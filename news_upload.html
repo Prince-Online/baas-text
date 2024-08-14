@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/8aa17a250d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="header">
+    <img src="https://i.ibb.co/vckRpWn/icon.png" class="app-icon">
+</div>
+<hr class="head-hr">
+<form id="newsForm">
+    <div class="form-group">
+        <label for="title">News Title:</label>
+        <input type="text" id="title" required>
+    </div>
+    <div class="form-group">
+        <label for="news">News:</label><br>
+        <textarea id="news" rows="4" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="image">Attach Image:</label><br>
+        <input type="file" id="image" accept="image/*" required>
+    </div>
+    <button type="submit" class="submit-btn-news">POST</button>
+</form>
+<div id="message"></div>
+<div id="loading" style="display: none;" class="loading-pro">Uploading<span id="dots"></span></div>
+<script src="upload_news.js"></script>
