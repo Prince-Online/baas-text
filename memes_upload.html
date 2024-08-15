@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/8aa17a250d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="header">
+    <img src="https://i.ibb.co/vckRpWn/icon.png" class="app-icon">
+</div>
+<hr class="head-hr">
+<form id="newsForm">
+    <div class="form-group">
+        <label for="title">Memes Title:</label>
+        <input type="text" id="title" required>
+    </div>
+    <div class="form-group">
+        <label for="image">Meme Image:</label><br>
+        <input type="file" id="image" accept="image/*" required>
+    </div>
+    <button type="submit" class="submit-btn-news">Upload</button>
+</form>
+<div id="loading" style="display: none;" class="loading-pro">Uploading<span id="dots">...</span></div>
+
+<!-- Custom Alert Box -->
+<div id="customAlert" class="custom-alert" style="display: none;">
+    <div class="custom-alert-content">
+        <span id="alertMessage"></span><br><br>
+        <button id="closeAlertBtn">OK</button>
+    </div>
+</div>
+<script src="meme_upload.js"></script>
+<style>
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #000;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.custom-alert-content {
+    text-align: center;
+}
+.loading-pro {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+</style>
